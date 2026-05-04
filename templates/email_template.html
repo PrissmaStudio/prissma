@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only dark">
+    <title>PRISSMA | DELIVERY</title>
+    <style>
+        :root { color-scheme: only dark; }
+        html, body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+        
+        /* Forțăm fundalul să rămână negru pur pe orice device */
+        u + .body-wrapper .main-table {
+            background-color: #000000 !important;
+            background-image: url('https://i.ibb.co/n8fGXGpG/negru.png') !important;
+        }
+
+        /* Eliminăm link-urile albastre automate pe iOS */
+        a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+    </style>
+</head>
+<body class="body-wrapper" bgcolor="#000000" style="margin: 0; padding: 0; background-color: #000000 !important; height: 100vh;">
+    
+    <table class="main-table" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" 
+           background="https://i.ibb.co/n8fGXGpG/negru.png" 
+           bgcolor="#000000" 
+           style="background-image: url('https://i.ibb.co/n8fGXGpG/negru.png'); background-repeat: repeat; background-color: #000000; min-height: 100vh;">
+        <tr>
+            <td align="center" valign="middle" style="padding: 40px 20px;">
+                
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 500px; margin: 0 auto;">
+                    
+                    <tr>
+                        <td align="center" style="padding-bottom: 80px;">
+                            <img src="{{ logo_url }}" alt="PRISSMA" width="100" style="display: block; width: 100px; height: auto; border: 0;">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding-bottom: 20px;">
+                            <h1 style="color: #808080 !important; font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 300; margin: 0; letter-spacing: 8px; text-transform: uppercase;">Materialele tale sunt gata</h1>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding-bottom: 40px;">
+                            <p style="color: #007bff !important; font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin: 0; text-transform: uppercase; letter-spacing: 2px;">
+                                {{ project_name }}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding-bottom: 60px;">
+                            <p style="color: #808080 !important; font-family: Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.8; margin: 0; max-width: 400px; font-weight: 300;">
+                                Ne bucurăm să îți livrăm editarea finală a acestui proiect. Sperăm ca rezultatul să îți aducă aceeași satisfacție pe care am avut-o noi lucrând la el.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center">
+                            <table border="0" cellspacing="0" cellpadding="0" align="center">
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 0px; background-color: #ffffff !important;">
+                                        <a href="{{ magic_link }}" target="_blank" style="padding: 20px 55px; font-family: Helvetica, Arial, sans-serif; font-size: 11px; font-weight: bold; color: #000000 !important; text-decoration: none; display: inline-block; letter-spacing: 4px; text-transform: uppercase; background-color: #ffffff;">VEZI GALERIA</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding-top: 120px;">
+                            <p style="color: #808080 !important; font-family: Arial, sans-serif; font-size: 8px; text-transform: uppercase; letter-spacing: 4px; margin: 0;">
+                                PRISSMA STUDIO • 2026
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

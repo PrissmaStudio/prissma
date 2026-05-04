@@ -1,0 +1,27 @@
+# Mediu virtual Python (NU se urcă niciodată)
+.venv/
+venv/
+ENV/
+__pycache__/
+*.pyc
+
+# Credențiale și fișiere sensibile
+credentials.json
+cookies.txt
+*.backup
+*.pdf
+
+# Datele aplicației și Baza de date
+instance/
+*.db
+*.db-shm
+*.db-wal
+misc_data/cache/
+misc_data/cache_thumbs/
+
+# Fișiere media (Pozele tale personale)
+static/uploads/
+static/video/optimized/
+
+# Fișiere de sistem Mac
+.DS_Store
