@@ -1095,7 +1095,7 @@ def set_language(lang):
 @app.route('/')
 def welcome(): return render_template('welcome.html')
 
-@app.   route('/about')
+@app.route('/about')
 def about(): return render_template('about.html')
 
 def get_drive_folder_mapping(folder_path):
