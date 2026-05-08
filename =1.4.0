@@ -1,0 +1,28 @@
+Collecting gevent
+  Downloading gevent-26.4.0.tar.gz (6.2 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+    Preparing wheel metadata: started
+    Preparing wheel metadata: finished with status 'done'
+Collecting zope.event
+  Downloading zope_event-6.0-py3-none-any.whl (6.4 kB)
+Collecting zope.interface
+  Downloading zope_interface-8.0.1-cp39-cp39-macosx_11_0_arm64.whl (207 kB)
+Collecting greenlet>=3.2.2
+  Using cached greenlet-3.2.5-cp39-cp39-macosx_11_0_universal2.whl (274 kB)
+Collecting setuptools>=75.8.2
+  Using cached setuptools-82.0.1-py3-none-any.whl (1.0 MB)
+Building wheels for collected packages: gevent
+  Building wheel for gevent (PEP 517): started
+  Building wheel for gevent (PEP 517): finished with status 'done'
+  Created wheel for gevent: filename=gevent-26.4.0-cp39-cp39-macosx_10_9_universal2.whl size=3005242 sha256=44bc9e4d7e9c468a7ee73b333e09553b6010abe067ca24cf31f0a4e3e233990a
+  Stored in directory: /Users/alex/Library/Caches/pip/wheels/dd/d2/3f/0fe7f00c2cf4408e4c8ed58b1dc2fe387a8ec5bd0fc46dd294
+Successfully built gevent
+Installing collected packages: setuptools, zope.interface, zope.event, greenlet, gevent
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 58.0.4
+    Uninstalling setuptools-58.0.4:
+      Successfully uninstalled setuptools-58.0.4
+Successfully installed gevent-26.4.0 greenlet-3.2.5 setuptools-82.0.1 zope.event-6.0 zope.interface-8.0.1
