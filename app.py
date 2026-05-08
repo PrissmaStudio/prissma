@@ -424,11 +424,17 @@ cache = Cache(app, config={
 
 # 🚀 OPTIMIZARE STATIC FILES - Cache și compresie
 @app.after_request
-def add_static_cache_headers(response):
-    """Adaugă headere pentru optimizare performanță"""
+def add_cache_headers(response):
+    """Adaugă headere pentru optimizare performanță și cache"""
     if request.path.startswith('/static/'):
         response.headers['Cache-Control'] = 'public, max-age=31536000'  # 1 an
         response.headers['X-Accel-Expires'] = '31536000'
+    else:
+        cache_friendly_prefixes = ('/media/', '/thumb/', '/api/gallery-items/')
+        if not request.path.startswith(cache_friendly_prefixes):
+            response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+            response.headers["Pragma"] = "no-cache"
+            response.headers["Expires"] = "0"
     return response
 
 limiter = Limiter(get_remote_address, app=app)
@@ -1089,7 +1095,7 @@ def set_language(lang):
 @app.route('/')
 def welcome(): return render_template('welcome.html')
 
-@app.   route('/about')
+@app.route('/about')
 def about(): return render_template('about.html')
 
 def get_drive_folder_mapping(folder_path):
@@ -2089,16 +2095,6 @@ def send_client_email():
         return jsonify({"status": "success", "message": "Email trimis!"})
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
-    
-@app.after_request
-def add_dynamic_no_cache_headers(response):
-    # Nu forța no-cache pe media/thumb/api paginat ca să permitem performanță bună la galerie.
-    cache_friendly_prefixes = ('/static/', '/media/', '/thumb/', '/api/gallery-items/')
-    if not request.path.startswith(cache_friendly_prefixes):
-        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-        response.headers["Pragma"] = "no-cache"
-        response.headers["Expires"] = "0"
-    return response
 
 @app.route('/admin/folder-security', methods=['POST'])
 def handle_folder_security_action():

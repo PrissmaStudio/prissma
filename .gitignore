@@ -25,3 +25,4 @@ static/video/optimized/
 
 # Fișiere de sistem Mac
 .DS_Store
+.env
